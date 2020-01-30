@@ -1,0 +1,33 @@
+body{
+  background-color: #f4f4f4;
+  color: #555555;
+  font-family: /*Helvetica, Arial, sans-serif;*/
+  /*"Lucida Console", Monaco, monospace*/
+  Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  font-weight: normal; /*400;*/
+  /* font: normal 16px Arial, Helvetica, sans-serif */
+
+  line-height: 1.6em; /* 3px */
+
+
+}
+
+.box-1{
+  background-color: #333;
+}
+
+/* from https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+ float: left;
+ width: 33.33%;
+ padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+ content: "";
+ clear: both;
+ display: table;
+}
