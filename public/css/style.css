@@ -31,3 +31,8 @@ body{
   width: 100%;
 
 }
+
+.allergies{
+  font-weight: bold;
+  color: silver;
+}
