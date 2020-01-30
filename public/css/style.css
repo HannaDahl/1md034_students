@@ -10,24 +10,25 @@ body{
 
   line-height: 1.6em; /* 3px */
 
-
 }
 
 .box-1{
+  border: 5px white dotted;
+  /*padding: 5px;*/
+  width: 610px;
   background-color: #333;
+  color: #A9A9A9;
 }
 
-/* from https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
- float: left;
- width: 33.33%;
- padding: 5px;
+.my-form{ /*input[type="text"], my-form textarea{*/
+  padding-left: 30px;
+  width: 100%;
+
 }
 
-/* Clear floats after image containers */
-.row::after {
- content: "";
- clear: both;
- display: table;
+.my-header{ /*input[type="text"], my-form textarea{*/
+  padding-top: 7px;
+  padding-left: 2px;
+  width: 100%;
+
 }

@@ -11,23 +11,24 @@
     <main>
     <h1>Welcome to Burgers Inc.!</h1>
     <section>
-      <h2> Our burgers </h2>
+      <div class="my-header">
+        <h2> Our burgers </h2>
+      </div>
       <p> At Burgers Inc. we promote 3 of our burgers  online each month. <br />
         Here are the current ones! Select one of your choosing to order. </p>
       </section>
 
   <div class="box-1">
     <section>
-          <table align="center">
+          <table>
                 <thead>
-                    <tr align="center">
-                      <img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg"  alt="Scary" title="Another in-line element" width="100">
-                        <th align="center">The Scary One </th>
-
-                        <th align="center">The French One</th>
-                          <img src="https://i.pinimg.com/originals/90/d0/38/90d038fc4c36eb13ebf8a4cd01f56edb.jpg"  alt="French" title="Another in-line element" width="133">
-                        <th align="center">The Trump One </th>
-                                      <img src="http://media4.xn--ihuvudetpevap-xfb.se/2016/11/IMG_1402.jpg"  alt="Trump" title="Another in-line element" width="200">
+                    <tr>
+                        <th >The Scary One </th>
+                         <img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" alt="Scary" title="Another in-line element" height="200" width="160">
+                        <th >The French One</th>
+                          <img src="https://i.pinimg.com/originals/90/d0/38/90d038fc4c36eb13ebf8a4cd01f56edb.jpg" align="center" alt="French" title="Another in-line element" height="200" width="200">
+                        <th >The Trump One </th>
+                          <img src="http://media4.xn--ihuvudetpevap-xfb.se/2016/11/IMG_1402.jpg" align="center" alt="Trump" title="Another in-line element" height="200" width=250>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,8 +68,8 @@
       <h3> Customer information </h3>
       <p> Please enter your information. </p>
           </section>
-
       <section id="contact">
+    <div class="my-form">
           <form>
             <p>
   <label for="firstname"> First </label><br>
@@ -91,9 +92,11 @@
   <input type="House Number" id="House Number" name="hn" required="required" placeholder="House Number" />
 </p>
           </form>
+        </div>
       </section>
     <section>
       <p>
+        <div class="my-form">
         <label for="payment"> Payment</label><br />
         <select id="payment" name="pym">
             <option> BitCoin </option>
@@ -101,21 +104,25 @@
             <option> VISA / Mastercard</option>
             <option> PayPal</option>
         </select>
+      </div>
     </p>
         </section>
 <section>
-
+<div class="my-form">
   <label for="radio"> Gender</label><br />
         <input type="radio" name="gender" value="male"> Male<br>
   <input type="radio" name="gender" value="female" checked="checked"> Female<br>
   <input type="radio" name="gender" value="other"> Other
+</div>
 </section>
 
 <section>
+  <div class="my-form">
   <p>
   <label for="submit"> Place Order</label><br />
 <input type="submit" value="✔ submit" />
 </p>
+</div">
 </section>
 
   </main>
