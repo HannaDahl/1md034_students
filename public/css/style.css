@@ -8,18 +8,21 @@ body{
   font-weight: normal; /*400;*/
   /* font: normal 16px Arial, Helvetica, sans-serif */
   line-height: 1.6em; /* 3px */
+  margin: 0 auto;
 
 }
 
 #boring-header{
-background-color: black;
+background-color: #333;
+border: 5px white dotted;
+padding: 20px;
 color: white;
 }
 
 #box-1{
   border: 5px white dotted;
   /*padding: 5px;*/
-  width: 610px;
+/*  width: 810px;*/
   background-color: #333;
   color: #A9A9A9;
 }
