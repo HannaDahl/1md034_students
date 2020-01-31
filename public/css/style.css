@@ -8,11 +8,12 @@ body{
   font-weight: normal; /*400;*/
   /* font: normal 16px Arial, Helvetica, sans-serif */
   line-height: 1.6em; /* 3px */
-  margin: 0 auto;
+  margin: 5px 10px;
 
 }
 
 #boring-header{
+/*margin: 5px 10px;*/
 background-color: #333;
 border: 5px white dotted;
 padding: 20px;
@@ -63,8 +64,10 @@ color: white;
 }
 
 #bottom{
+    margin-top: 7px;
     background-color:#fff ;
     padding-left: 30px;
     width: 100%;
     padding-bottom: 10px;
+    border: 5px black double;
 }
