@@ -1,136 +1,135 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Burgers Inc.</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css"
-    href="css/style.css">
-  </head>
-  <body>
-    <main>
+<head>
+  <title>Burgers Inc.</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css"
+  href="css/style.css">
+</head>
+<body>
+  <main>
     <h1>Welcome to Burgers Inc.!</h1>
-    <section>
+    <section id="boring-header">
       <div class="my-header">
+
         <h2> Our burgers </h2>
       </div>
       <p> At Burgers Inc. we promote 3 of our burgers  online each month. <br />
         Here are the current ones! Select one of your choosing to order. </p>
-      </section>
 
-  <div class="box-1">
-    <section>
+
+    <!   <div id="box-1">
+
           <table>
-                <thead>
-                    <tr>
-                        <th >The Scary One </th>
-                         <img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" alt="Scary" title="Another in-line element" height="200" width="160">
-                        <th >The French One</th>
-                          <img src="https://i.pinimg.com/originals/90/d0/38/90d038fc4c36eb13ebf8a4cd01f56edb.jpg" align="center" alt="French" title="Another in-line element" height="200" width="200">
-                        <th >The Trump One </th>
-                          <img src="http://media4.xn--ihuvudetpevap-xfb.se/2016/11/IMG_1402.jpg" align="center" alt="Trump" title="Another in-line element" height="200" width=250>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                          <ul>
-                              <li> Vegan Beef</li>
-                              <li> Beans </li>
-                                <div class="allergies"><li> Contains nuts</li></div>
-                          </ul>
-                        </td>
-                        <td>
-                          <ul>
-                              <li> Finest Meat</li>
-                              <li> Camembert </li>
-                                <div class="allergies"><li> Contains lactose</li></div>
-                          </ul>
-                        </td>
-                        <td>
-                          <ul>
-                              <li> Probably meat</li>
-                              <li>  E450, E251, E452</li>
-                              <div class="allergies"><li> Contains cholesterol</li></div>
-                          </ul>
-                        </td>
-                    <tr>
+            <thead>
+              <tr>
+                <th >The Scary One </th>
+                <img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" alt="Scary" title="Another in-line element" height="200" width="160">
+                <th >The French One</th>
+                <img src="https://i.pinimg.com/originals/90/d0/38/90d038fc4c36eb13ebf8a4cd01f56edb.jpg" align="center" alt="French" title="Another in-line element" height="200" width="200">
+                <th >The Trump One </th>
+                <img src="http://media4.xn--ihuvudetpevap-xfb.se/2016/11/IMG_1402.jpg" align="center" alt="Trump" title="Another in-line element" height="200" width=250>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li> Vegan Beef</li>
+                    <li> Beans </li>
+                    <div class="allergies"><li> Contains nuts</li></div>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li> Finest Meat</li>
+                    <li> Camembert </li>
+                    <div class="allergies"><li> Contains lactose</li></div>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li> Probably meat</li>
+                    <li>  E450, E251, E452</li>
+                    <div class="allergies"><li> Contains cholesterol</li></div>
+                  </ul>
+                </td>
+                <tr>
 
-                        <td align="center"> $5</td>
-                        <td align="center"> $20</td>
-                        <td align="center"> $7</td>
-                    </tr>
-                </tbody>
+                  <td align="center"> $5</td>
+                  <td align="center"> $20</td>
+                  <td align="center"> $7</td>
+                </tr>
+              </tbody>
 
             </table>
-</section>
-</div>
-    <section>
-      <h3> Customer information </h3>
-      <p> Please enter your information. </p>
           </section>
-      <section id="contact">
-    <div class="my-form">
+        </div>
+      </div>
+
+      <section id="bottom">
+        <h3> Customer information </h3>
+        <p> Please enter your information. </p>
+
+        <div class="my-form">
           <form>
             <p>
-  <label for="firstname"> First </label><br>
-  <input type="text" id="firstname" name="fn" required="required" placeholder="First name" />
-</p>
-<p>
-  <label for="lastname"> Last </label><br>
-  <input type="text" id="lastname" name="ln" placeholder="Last name" />
-</p>
-<p>
-  <label for ="email"> Email </label><br>
-  <input type="email" id="Email" name="em" required="required" placeholder="E-mail address" />
-</p>
-<p>
-  <label for ="street"> Adress (street) </label><br>
-  <input type="street" id="Email" name="st" required="required" placeholder="Street Name" />
-</p>
-<p>
-  <label for ="House Number"> Adress (number) </label><br>
-  <input type="House Number" id="House Number" name="hn" required="required" placeholder="House Number" />
-</p>
+              <label for="firstname"> First </label><br>
+              <input type="text" id="firstname" name="fn" required="required" placeholder="First name" />
+            </p>
+            <p>
+              <label for="lastname"> Last </label><br>
+              <input type="text" id="lastname" name="ln" placeholder="Last name" />
+            </p>
+            <p>
+              <label for ="email"> Email </label><br>
+              <input type="email" id="Email" name="em" required="required" placeholder="E-mail address" />
+            </p>
+            <p>
+              <label for ="street"> Adress (street) </label><br>
+              <input type="street" id="Email" name="st" required="required" placeholder="Street Name" />
+            </p>
+            <p>
+              <label for ="House Number"> Adress (number) </label><br>
+              <input type="House Number" id="House Number" name="hn" required="required" placeholder="House Number" />
+            </p>
           </form>
         </div>
-      </section>
-    <section>
-      <p>
-        <div class="my-form">
-        <label for="payment"> Payment</label><br />
-        <select id="payment" name="pym">
-            <option> BitCoin </option>
-            <option> Klarna</option>
-            <option> VISA / Mastercard</option>
-            <option> PayPal</option>
-        </select>
-      </div>
-    </p>
-        </section>
-<section>
-<div class="my-form">
-  <label for="radio"> Gender</label><br />
-        <input type="radio" name="gender" value="male"> Male<br>
-  <input type="radio" name="gender" value="female" checked="checked"> Female<br>
-  <input type="radio" name="gender" value="other"> Other
-</div>
-</section>
 
-<section>
-  <div class="my-form">
-  <p>
-  <label for="submit"> Place Order</label><br />
-<input type="submit" value="✔ submit" />
-</p>
-</div">
-</section>
+        <p>
+          <div class="my-form">
+            <label for="payment"> Payment</label><br />
+            <select id="payment" name="pym">
+              <option> BitCoin </option>
+              <option> Klarna</option>
+              <option> VISA / Mastercard</option>
+              <option> PayPal</option>
+            </select>
+          </div>
+        </p>
+        <div class="my-form">
+          <label for="radio"> Gender</label><br />
+          <input type="radio" name="gender" value="male"> Male<br>
+          <input type="radio" name="gender" value="female" checked="checked"> Female<br>
+          <input type="radio" name="gender" value="other"> Other
+        </div>
+
+        <div class="my-form">
+          <p>
+            <label for="submit"> Place Order</label><br />
+            <input type="submit" value="✔ submit" />
+          </p>
+        </div>
+      </div>
+
+    </section>
 
   </main>
   <footer>
-     <hr>
-     &copy; 2020 Burgers Inc.
-     <p><img src="https://imagizer.imageshack.com/img923/6663/G3tvCm.gif" alt="Monkey" title="Another in-line element" width="200"> visitors since the previous counter reset.</p>
-    </footer>
-  </body>
-  </html>
+    <hr>
+    &copy; 2020 Burgers Inc.
+    <p><img src="https://imagizer.imageshack.com/img923/6663/G3tvCm.gif" alt="Monkey" title="Another in-line element" width="200"> visitors since the previous counter reset.</p>
+  </footer>
+</body>
+</html>

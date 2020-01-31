@@ -11,7 +11,12 @@ body{
 
 }
 
-.box-1{
+#boring-header{
+background-color: black;
+color: white;
+}
+
+#box-1{
   border: 5px white dotted;
   /*padding: 5px;*/
   width: 610px;
@@ -35,4 +40,14 @@ body{
 .allergies{
   font-weight: bold;
   color: silver;
+}
+
+#top{
+    background-color: #fff;
+}
+
+#bottom{
+    background-color:#fff ;
+    padding-left: 30px;
+    width: 100%;
 }
