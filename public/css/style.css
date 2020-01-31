@@ -12,17 +12,25 @@ body{
 
 }
 
+.extra{
+  position: absolute;
+}
 .heads{
-  margin-left: 5px 10px;
+  margin-left: 50px 10px 5px 10px;
   opacity: 0.6;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 5px;
 }
 
 #boring-header{
-/*margin: 5px 10px;*/
+/*margin: 5px 10px 5px 10px;*/
 background-color: #333;
 border: 5px white dotted;
 padding: 20px;
 color: white;
+position:relative;
 }
 
 #box-1{
