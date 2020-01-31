@@ -12,6 +12,11 @@ body{
 
 }
 
+.heads{
+  margin-left: 5px 10px;
+  opacity: 0.6;
+}
+
 #boring-header{
 /*margin: 5px 10px;*/
 background-color: #333;
