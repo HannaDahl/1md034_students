@@ -12,6 +12,11 @@ body{
 
 }
 
+.wrapper{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  /*background: #ddd;*/
+}
 .extra{
   position: absolute;
 }
@@ -21,7 +26,7 @@ body{
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 5px;
+  padding: 0px;
 }
 
 #boring-header{
@@ -63,10 +68,16 @@ position:relative;
     background-color: #fff;
 }
 
-
+#button{
+  background: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 #button:hover
 {
-  background-color: yellow;
+  background-color: lightgreen;
   cursor: pointer;
 }
 
