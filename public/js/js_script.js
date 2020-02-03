@@ -13,6 +13,10 @@ function menuItem(name, kCal, allergy, pathToImage){
 }
 
 let Scary = new menuItem('The Scary One', '3 kCal', 'Nuts', 'hejtppat');
+let French = new menuItem('The French One', '300 kCal', 'Lactose');
+let Trump = new menuItem('The Trump One', '3000 kCal', 'Cholesterol');
+let Air = new menuItem('Air Force One', '299,792 kCal', '');
+let Done = new menuItem('The Done', '42 kCal', 'Bacon (pig)');
 console.log(Scary);
 
 function returnkCalAndName(product) {
@@ -24,21 +28,23 @@ function returnkCalAndName(product) {
   }
 }
 
-let res = returnkCalAndName(Scary);
-console.log('heheheh')
-console.log(res);
-/*let French = new menuItem('The French One', '300 kCal', 'Lactose');
-let Trump = new menuItem('The Trump One', '3000 kCal', 'Cholesterol');
-let Swede = new menuItem('Air Force One', '299,792 kCal', '');
-let Aussie = new menuItem('The Done', '42 kCal', 'Bacon (pig)');*/
+console.log('cal and name returned:')
+let res1 = returnkCalAndName(Scary);
+let res2 = returnkCalAndName(Trump);
+let res3 = returnkCalAndName(Air);
+let res4 = returnkCalAndName(Done);
+console.log(res1, res2, res2, res3, res4);
+
+
 
 console.log(Scary.item);
 console.log(French.item);
 console.log(Trump.item);
-console.log(Swede.item);
-console.log(Aussie.item);
+console.log(Air.item);
+console.log(Done.item);
 
 
+/*
 // To get an element with a specific ID, use getElementById()
 let el = document.getElementById('anID');
 
@@ -52,4 +58,4 @@ let elss = document.getElementsByName('aName');
 let elsss = document.getElementsByTagName('p'); // Returns all paragraph elements in the document
 
 
-document.getElementById("myID").innerHTML = "Välj en burgare";
+document.getElementById("myID").innerHTML = "Välj en burgare";*/

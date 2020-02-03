@@ -35,56 +35,56 @@ body{
   z-index:9;
 }
 
-
+/*
 .wrapper{
   display: grid;
   grid-template-columns: 30% 30% 30%;
-background: #ddd;
-}
+  /*background: #ddd;*/
+/*}*/
 
-}
+/* }
 .extra{
   position: absolute;
-} 
-.heads{
+} */
+/* .heads{
   margin-left: 50px 10px 5px 10px;
   opacity: 0.6;
   width: 100%;
   overflow: hidden;
   position: relative;
   padding: 0px;
-} 
+} */
 
- #boring-header{
+/* #boring-header{
 margin: 5px 10px 5px 10px;*/
-background-color: #333;
+/*background-color: #333;
 border: 5px white dotted;
 padding: 20px;
-color: grey;
+color: white;
 position:relative;
-} 
+} */
 
-#box-1{
+/*#box-1{
   border: 5px white dotted;
-  padding: 5px;
- width: 810px;
- background-color: #333;
+  /*padding: 5px;*/
+/*  width: 810px;*/
+ /* background-color: #333;
   color: #A9A9A9;
-} 
+}*/ 
 
- .my-form{ /*input[type="text"], my-form textarea{*/
-  padding-left: 30px;
+/* .my-form{ /*input[type="text"], my-form textarea{*/
+ /* padding-left: 30px;
   width: 100%;
 
-} 
+} */
 
-.my-header{ /*input[type="text"], my-form textarea{*/
-   padding-top: 7px;
+/*.my-header{ /*input[type="text"], my-form textarea{*/
+  /*padding-top: 7px;
   padding-left: 2px;
   width: 100%;
 
-} 
- 
+}*/
+/*
 .allergies{
   font-weight: bold;
   color: silver;
@@ -119,4 +119,4 @@ position:relative;
     width: 100%;
     padding-bottom: 10px;
     border: 5px black double;
-}   
+}   */
