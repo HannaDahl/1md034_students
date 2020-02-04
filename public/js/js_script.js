@@ -43,6 +43,17 @@ console.log(Trump.item);
 console.log(Air.item);
 console.log(Done.item);
 
+/*const vm = new Vue({
+  //Here comes the optional elements of the Vue object
+})
+
+// Binding vue instance to object
+const vm = new Vue({
+  el: '#myID'
+  }
+)*/
+
+document.getElementById("myID").innerHTML = "Välj en burgare";
 
 /*
 // To get an element with a specific ID, use getElementById()
