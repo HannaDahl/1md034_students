@@ -70,3 +70,84 @@ let elsss = document.getElementsByTagName('p'); // Returns all paragraph element
 
 
 document.getElementById("myID").innerHTML = "Välj en burgare";*/
+
+function makeListNoLoops() {
+    
+  let res1 = Scary.name;
+  let res2 = French.name;
+  let res3 = Trump.name;
+  let res4 = Air.name;
+  let res5 = Done.name;
+
+  let burgerList = [
+      res1, res2, res3, res4, res5
+  ],
+
+listContainer = document.createElement('div'),
+listElement = document.createElement('ul'),
+listItem;
+
+ document.getElementsByTagName('body')[0].appendChild(listContainer);
+
+listContainer.appendChild(listElement);
+
+ listItem = document.createElement('li');
+ listItem.innerHTML = burgerList[0];
+ listElement.appendChild(listItem);
+ 
+ listItem = document.createElement('li');
+ listItem.innerHTML = burgerList[1];
+ listElement.appendChild(listItem);
+ 
+ listItem = document.createElement('li');
+ listItem.innerHTML = burgerList[2];
+ listElement.appendChild(listItem);
+ 
+ listItem = document.createElement('li');
+ listItem.innerHTML = burgerList[3];
+ listElement.appendChild(listItem);
+ 
+ listItem = document.createElement('li');
+ listItem.innerHTML = burgerList[4];
+ listElement.appendChild(listItem);
+   
+}
+
+makeListNoLoops();
+
+/*function makeList() {
+    
+  let res1 = Scary.name;
+  let res2 = French.name;
+  let res3 = Trump.name;
+  let res4 = Air.name;
+  let res5 = Done.name;
+
+  let burgerList = [
+      res1, res2, res3, res4, res5
+  ],
+
+  // Make a container element for the list
+  listContainer = document.createElement('div'),
+  // Make the list
+  listElement = document.createElement('ul'),
+  // Loop that goes through the items in order
+  numberOfListItems = burgerList.length,
+  listItem,
+  i;
+
+  // Add it to webpage
+  document.getElementsByTagName('body')[0].appendChild(listContainer);
+  listContainer.appendChild(listElement);
+
+  for (i = 0; i < numberOfListItems; ++i) {
+     
+      listItem = document.createElement('li');
+      listItem.innerHTML = burgerList[i];
+      listElement.appendChild(listItem);
+  }
+}
+
+makeList();
+
+*/

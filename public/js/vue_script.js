@@ -11,6 +11,35 @@ const vm = new Vue({
     }
   })
 
+/*
+<script src="https://vuejs.org/js/vue.js"></script>
+
+
+<div >
+
+  
+  <ul id="list">
+  <li v-for="value in object">
+  {{ value }}
+  </li>
+  </ul>
+</div>
+
+*/
+  
+var lists = new Vue({
+  el: '#list',
+  data: {
+  object: [
+   'The Scary One',
+   'The French One',
+   'The Trump One',
+   'Air Force One',
+   'The Done'
+   ]
+  }
+  })
+
   // -----------------------------
 
   /* JS FIDDLE js
