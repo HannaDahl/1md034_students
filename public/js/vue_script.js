@@ -66,3 +66,48 @@ var lists = new Vue({
 </div>
 
   */
+
+  ////////////// WITH CONDITIONAL AND LOOP ////
+
+  // HTML
+
+  /*
+
+  <script src="https://vuejs.org/js/vue.js"></script>
+
+<div id="list">
+<ul>
+  
+  
+   <li  v-for="burger in burgers" >
+   {{burger.text}} 
+   <p v-if="burger.id > 0">
+   {{burger.allergy}}
+   </p>
+   </li>
+</ul>
+</div>
+
+*/
+
+///// JS / VUE ////
+
+/*
+
+
+
+var lists = new Vue({
+  el: '#list',
+  data: {
+  burgers: [
+  
+  	 { text: 'The Scary One', allergy: 'nuts', id: 1},
+     { text: 'The French One', allergy: 'lactose', id: 1},
+   	 { text: 'The Trump One', allergy: 'cholesterol', id: 1 },
+  	 { text: 'Air Force One', allergy: '', id: 0},
+     { text: 'The Done', allergy: '', id: 0}
+   ]
+  }
+  })
+  
+  */

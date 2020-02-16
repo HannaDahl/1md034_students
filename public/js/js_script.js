@@ -15,8 +15,8 @@ function menuItem(name, kCal, allergy, pathToImage){
 let Scary = new menuItem('The Scary One', '3 kCal', 'Nuts', 'hejtppat');
 let French = new menuItem('The French One', '300 kCal', 'Lactose');
 let Trump = new menuItem('The Trump One', '3000 kCal', 'Cholesterol');
-let Air = new menuItem('Air Force One', '299,792 kCal', '');
-let Done = new menuItem('The Done', '42 kCal', 'Bacon (pig)');
+let Air = new menuItem('Air Force One', '299,792 kCal', '0');
+let Done = new menuItem('The Done', '42 kCal', '0');
 console.log(Scary);
 
 function returnkCalAndName(product) {
@@ -71,6 +71,7 @@ let elsss = document.getElementsByTagName('p'); // Returns all paragraph element
 
 document.getElementById("myID").innerHTML = "Välj en burgare";*/
 
+/*
 function makeListNoLoops() {
     
   let res1 = Scary.name;
@@ -113,9 +114,9 @@ listContainer.appendChild(listElement);
    
 }
 
-makeListNoLoops();
+makeListNoLoops(); */
 
-/*function makeList() {
+function makeListPre() {
     
   let res1 = Scary.name;
   let res2 = French.name;
@@ -123,7 +124,7 @@ makeListNoLoops();
   let res4 = Air.name;
   let res5 = Done.name;
 
-  let burgerList = [
+  let menu = [
       res1, res2, res3, res4, res5
   ],
 
@@ -142,12 +143,110 @@ makeListNoLoops();
 
   for (i = 0; i < numberOfListItems; ++i) {
      
+    //creates list
       listItem = document.createElement('li');
+      // takes ith element of burgerList to append ....
       listItem.innerHTML = burgerList[i];
+      // ... here
       listElement.appendChild(listItem);
+      
+  }
+}
+
+makeListPre();
+*/
+////////// With conditional: ////////////////////
+
+
+function makeAllergy(i){
+  let res1 = Scary;
+  let res2 = French;
+  let res3 = Trump;
+  let res4 = Air;
+  let res5 = Done;
+
+	let allergi = [
+  	res1.allergies, res2.allergies, res3.allergies, res4.allergies, res5.allergies
+  ];
+  let allergy = allergi[i],
+  
+		listContainer = document.createElement('div'),
+		listElement = document.createElement('ul'),
+		listItem;
+
+ 		document.getElementsByTagName('body')[0].appendChild(listContainer);
+
+		listContainer.appendChild(listElement);
+			listItem = document.createElement('li');
+ 			listItem.innerHTML = allergy;
+ 			listElement.appendChild(listItem);
+  
+}
+
+makeAllergy(2);
+
+function makeAllergy2(i){
+  let res1 = Scary;
+  let res2 = French;
+  let res3 = Trump;
+  let res4 = Air;
+  let res5 = Done;
+
+	let allergi = [
+  	res1.allergies, res2.allergies, res3.allergies, res4.allergies, res5.allergies
+  ];
+  
+  return allergi[i];
+}
+
+function makeList() {
+    
+  let res1 = Scary;
+  let res2 = French;
+  let res3 = Trump;
+  let res4 = Air;
+  let res5 = Done;
+
+/*let listAllergies = [
+      res1.allergies, res2.allergies, res3.allergies, res4.alleriges, res5.allergies
+  ];*/
+  
+  let menu = [
+      res1.name, res2.name, res3.name, res4.name, res5.name
+  ],
+
+  // Make a container element for the list
+  listContainer = document.createElement('div'),
+  // Make the list
+  listElement = document.createElement('ul'),
+  // Loop that goes through the items in order
+  numberOfListItems = menu.length,
+  listItem,
+  //listAllergy,
+  i;
+
+  // Add it to webpage
+  document.getElementsByTagName('body')[0].appendChild(listContainer);
+  listContainer.appendChild(listElement);
+
+  for (i = 0; i < numberOfListItems; ++i) {
+ 
+    //creates list
+      listItem = document.createElement('li');
+      // takes ith element of burgerList to append ....
+      listItem.innerHTML = menu[i];
+      // ... here
+      listElement.appendChild(listItem);
+      
+      listItem = document.createElement('li');
+      
+      if(makeAllergy2(i))
+      {
+      	listItem.innerHTML = makeAllergy2(i);
+	      listElement.appendChild(listItem);
+       }
+      
   }
 }
 
 makeList();
-
-*/
