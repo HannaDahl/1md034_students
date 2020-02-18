@@ -6,29 +6,27 @@ function menuItem(name, ingr1, ingr2, kCal, allergy, image){
   this.ingr2 = ingr2;
   this.kCal = kCal;
   this.allergies = allergy;
-  this.tag = image;
   //this.pathToImage; String = pathToImage
   this.image = '/img/' + image + '.jpg';
 }
 console.log('menuItem construct');
 
 let Scary = new menuItem('The Scary One', 'Vegan Beef', 'Beans', '3 kCal', 'Nuts', 'Scary');
-let French = new menuItem('The French One', 'Finest Meat', 'Camembert','300 kCal', 'Lactose','French');
-let Trump = new menuItem('The Trump One', 'Probably Meat', 'E450, E251, E542', '3000 kCal', 'Cholesterol','Trump');
-//let Air = new menuItem('Air Force One', 'Beef', 'Bread', '299,792 kCal', '','Scary');
-//let Done = new menuItem('The Done', 'Charcoal', 'Ketchup','42 kCal', '','Scary');
+let French = new menuItem('The French One', 'Finest Meat', 'Camembert','300 kCal', 'Lactose','Scary');
+let Trump = new menuItem('The Trump One', 'Probably Meat', 'E450, E251, E542', '3000 kCal', 'Cholesterol','Scary');
+let Air = new menuItem('Air Force One', 'Beef', 'Bread', '299,792 kCal', '','Scary');
+let Done = new menuItem('The Done', 'Charcoal', 'Ketchup','42 kCal', '','Scary');
 console.log('menuItem create burgers');
-let menu =  [Scary, French, Trump];
+let burger =  [Scary, French, Trump, Air, Done];
 
 
 ////////// Functions //////////////
 
 console.log('allergies');
-
 function makeAllergy(i){
 
 	let allergi = [
-  	Scary.allergies, French.allergies, Trump.allergies
+  	res1.allergies, res2.allergies, res3.allergies, res4.allergies, res5.allergies
   ];
 
   console.log('allergies');
@@ -67,54 +65,25 @@ function makeList() {
 
 function makeBurger() {
   console.log('makeBurgers');
-  let i = 0;
-
-  let tags = ['Scary', 'French', 'Trump'];
-
-  for(burger of menu) {
+  //for(burger of menu) {
 
   let listContainer = document.createElement('div');
-  document.getElementById(tags[i]).appendChild(listContainer);
+  document.getElementById('Scary').appendChild(listContainer);
 
-  //header
   let header = document.createElement('h1');
-  header.innerHTML = burger.name;
+  header.innerHTML = burger[0].name;
   listContainer.appendChild(header);
-  
 
-  //image
   let img = document.createElement('img');
-  img.setAttribute('src', burger.image);
+  img.setAttribute('src', burger[0].image);
   listContainer.appendChild(img);
 
-  //create list
   list = document.createElement('ul');
   listContainer.appendChild(list);
 
-  //ingr1
   listItem = document.createElement('li');
-  listItem.innerHTML = burger.ingr1;
+  listItem.innerHTML = burger[0].ingr1;
   list.appendChild(listItem);
-
-  //ingr2
-  listItem = document.createElement('li');
-  listItem.innerHTML = burger.ingr2;
-  list.appendChild(listItem);
-
-  //kCal
-  listItem = document.createElement('li');
-  listItem.innerHTML = burger.kCal;
-  list.appendChild(listItem);
-
-  if(makeAllergy(i))
-      {
-        listItem = document.createElement('li');
-      	listItem.innerHTML = makeAllergy(i);
-	      list.appendChild(listItem);
-       }
-
-  ++i;
-}
 }
   
 /*

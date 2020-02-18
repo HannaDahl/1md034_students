@@ -1,8 +1,8 @@
-<script src="https://vuejs.org/js/vue.js"></script>
+/* <script src="https://vuejs.org/js/vue.js"></script>
 
 <div id="myID">
     {{ ArbitraryVariableName}}
-</div> */
+</div> 
 
 const vm = new Vue({
     el: '#myID',
@@ -11,6 +11,7 @@ const vm = new Vue({
     }
   })
 
+  */
 /*
 <script src="https://vuejs.org/js/vue.js"></script>
 
