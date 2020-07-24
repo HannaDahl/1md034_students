@@ -1,5 +1,14 @@
-////////// Initialize burgers //////////////
+///////////////////// FUNCTIONS & VARIABLES ///////////////////////
 
+    /*
+    function: menuItem
+    description: Initializes burgers 
+    name: name of burger
+    ingr1 & ingr2: ingrediens #1 and #2
+    kCal: amount of calories 
+    allergy: ingredient
+    image: path to image 
+    */
 function menuItem(name, ingr1, ingr2, kCal, allergy, image){
   this.name = name;
   this.ingr1 = ingr1;
@@ -10,65 +19,48 @@ function menuItem(name, ingr1, ingr2, kCal, allergy, image){
   //this.pathToImage; String = pathToImage
   this.image = '/img/' + image + '.jpg';
 }
-console.log('menuItem construct');
 
+    /*
+    Chooses burgers to initialize
+    */
 let Scary = new menuItem('The Scary One', 'Vegan Beef', 'Beans', '3 kCal', 'Nuts', 'Scary');
 let French = new menuItem('The French One', 'Finest Meat', 'Camembert','300 kCal', 'Lactose','French');
 let Trump = new menuItem('The Trump One', 'Probably Meat', 'E450, E251, E542', '3000 kCal', 'Cholesterol','Trump');
-//let Air = new menuItem('Air Force One', 'Beef', 'Bread', '299,792 kCal', '','Scary');
-//let Done = new menuItem('The Done', 'Charcoal', 'Ketchup','42 kCal', '','Scary');
-console.log('menuItem create burgers');
+
+    /*
+    Prints out message to inform that burgers have been created to console.
+    */
+console.log('menuItems have been created; next - menu');
+
+    /*
+    Creates menu consisting of the burgers above.
+    */
 let menu =  [Scary, French, Trump];
 
-
-////////// Functions //////////////
-
-console.log('allergies');
-
+    /*
+    function: makeAllergy
+    description: assignes individual allergies of burgers to a list
+    */
 function makeAllergy(i){
-
 	let allergi = [
   	Scary.allergies, French.allergies, Trump.allergies
   ];
-
-  console.log('allergies');
   return allergi[i];
 }
 
-/*
-function makeList() {
+    /*
+    Prints out message to console notifying that allergies have been created.
+    */
+console.log('allergies created');
 
-  let menu = [
-    res1.name, res2.name, res3.name, res4.name, res5.name
-  ];
 
-  listContainer = document.createElement('div'),
-  listElement = document.createElement('ul'),
-  numberOfListItems = menu.length,
-  listItem,
-  i;
 
-  document.getElementsByTagName('body')[0].appendChild(listContainer);
-  listContainer.appendChild(listElement);
-
-  for (i = 0; i < numberOfListItems; ++i) {
-
-      listItem = document.createElement('li');
-      listItem.innerHTML = menu[i];
-      listElement.appendChild(listItem);
-      listItem = document.createElement('li');
-      if(makeAllergy(i))
-      {
-      	listItem.innerHTML = makeAllergy(i);
-	      listElement.appendChild(listItem);
-       }
-  }
-}*/
-
+    /*
+    function: makeBurger
+    description: adds all burgers to the page
+    */
 function makeBurger() {
-  console.log('makeBurgers');
   let i = 0;
-
   let tags = ['Scary', 'French', 'Trump'];
 
   for(burger of menu) {
@@ -117,30 +109,14 @@ function makeBurger() {
 }
 }
   
-/*
-  console.log('aenters loop');
-  for (i = 0; i < numberOfListItems; ++i) {
+///////////////////// INITIALIZING BURGERS ///////////////////////
 
-      listItem = document.createElement('li');
-      listItem.innerHTML = burger[i];
-      listElement.appendChild(listItem);
-      listItem = document.createElement('li');
-      console.log("SKAPA BURGARE");
-
-      if(makeAllergy(1))
-      {
-      	listItem.innerHTML = makeAllergy(1);
-	      listElement.appendChild(listItem);
-       }
-  }
-}
-*/
-
-////////////////////////
-
-console.log('document');
-
-
-/////////////////////////////////////////
-
+    /*
+    Calling makeBurger to initialize all the burgers.
+    */
 makeBurger();
+
+    /*
+      Informs via console that the burgers are finished being created.
+    */
+   console.log('finished initializing burgers');
