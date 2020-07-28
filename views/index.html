@@ -1,62 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Burgers Inc.</title>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css"
-  href="css/style.css">
-  <script src="js/js_script.js" defer></script>
-  <!--<script src="js/vue_script.js" defer></script>-->
-  <!--<script src="https://vuejs.org/js/vue.js" defer></script>-->
-  </head>
-  </div>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--<script src="js/js_script.js" defer></script> -->
+</head>
+</div>
 
 
 <body>
-  
 
-    <div id="container">
+
+  <div id="container">
 
     <div id="header_image">
-    <img src="https://imagizer.imageshack.com/img924/5844/5PE59G.png" id="heads" width="100%">
+      <img src="https://imagizer.imageshack.com/img924/5844/5PE59G.png" id="heads" width="100%">
     </div>
 
     <div id="header_title">
-    <h1>Welcome to Burgers Inc.!</h1>
+      <h1>Welcome to Burgers Inc.!</h1>
     </div>
 
-    </div>
+  </div>
 
-    <main>
-    <section id="burger-section"> 
+  <main>
+    <section id="burger-section">
 
-        <h2> Our burgers </h2>
-        <p> At Burgers Inc. we promote 3 of our burgers  online each month. <br />
+      <h2> Our burgers </h2>
+      <p> At Burgers Inc. we promote 3 of our burgers online each month. <br />
         Here are the current ones! Select one of your choosing to order. </p>
 
-        <div id="wrapper" align="center">
-          
-          <div id="Scary">
-           <!-- <th><img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" height="300" width="300"></th>
-           -->
-           
-          </div>
+      <div id="wrapper" align="center">
 
-          <div id="French">
+        <!--<div id="Scary">
+           <th><img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" height="300" width="300"></th>
+        </div> -->
 
-          </div>
-          <div id="Trump">
-            
-          </div>
-          <div id="Air">
-            
-          </div>
-          <div id="Done">
-            
-          </div>
-         <!--  <div>
+      <!--
+        <div>
+          <ul id="example-1">
+            <li v-for="item in items" :key="item.message">
+              {{item.message}}
+            </li>
+          </ul>
+        </div>
+
+        -->
+
+        <div id="burger1">
+          <h4>{{ name }} </h4> 
+          <img v-bind:src="'/img/' + pics.burgerpic" /> 
+          <ul>
+            <li v-for="item in items" :key="item.contains">
+              {{item.contains}}
+            </li>
+          </ul>
+        </div>
+
+        <div id="burger2">
+          <h4>{{ name }} </h4> 
+          <img v-bind:src="'/img/' + pics.burgerpic" /> 
+          <ul>
+            <li v-for="item in items" :key="item.contains">
+              {{item.contains}}
+            </li>
+          </ul>
+        </div>
+
+        <div id="burger3">
+          <h4>{{ name }} </h4> 
+          <img v-bind:src="'/img/' + pics.burgerpic" /> 
+          <ul>
+            <li v-for="item in items" :key="item.contains">
+              {{item.contains}}
+            </li>
+          </ul>
+        </div>
+
+
+        <!--
+      </div>
+      <div id="Air">
+
+      </div>
+      <div id="Done">
+      -->
+
+
+      </div>
+      <!--  <div>
             <img src="https://i.pinimg.com/originals/90/d0/38/90d038fc4c36eb13ebf8a4cd01f56edb.jpg" align="center" height="300" width="300"></th>
             <h1>The French One</h1>
             <li > Finest Meat</li>
@@ -74,64 +108,64 @@
         -->
       </div>
 
-          </section>
+    </section>
 
-      <section id="info">
+    <section id="info">
 
-        <h3> Customer information </h3>
-        <p> Please enter your information. </p>
+      <h3> Customer information </h3>
+      <p> Please enter your information. </p>
 
-        <div class="my-form">
-          <form>
-            <p>
-              <label for="firstname"> First </label><br>
-              <input type="text" id="firstname" name="fn" required="required" placeholder="First name" />
-            </p>
-            <p>
-              <label for="lastname"> Last </label><br>
-              <input type="text" id="lastname" name="ln" placeholder="Last name" />
-            </p>
-            <p>
-              <label for ="email"> Email </label><br>
-              <input type="email" id="Email" name="em" required="required" placeholder="E-mail address" />
-            </p>
-            <p>
-              <label for ="street"> Adress (street) </label><br>
-              <input type="street" id="Email" name="st" required="required" placeholder="Street Name" />
-            </p>
-            <p>
-              <label for ="House Number"> Adress (number) </label><br>
-              <input type="House Number" id="House Number" name="hn" required="required" placeholder="House Number" />
-            </p>
-          </form>
-        </div>
-
-      
-          <div class="my-form">
-            <label for="payment"> Payment</label><br />
-            <select id="payment" name="pym">
-               <option> BitCoin </option>
-              <option> Klarna</option>
-              <option> VISA / Mastercard</option>
-              <option> PayPal</option>
-            </select>
-          </div>
-        
-        <div class="my-form">
-          <label for="radio"> Gender</label><br />
-          <input type="radio" name="gender" value="male"> Male<br>
-          <input type="radio" name="gender" value="female" checked="checked"> Female<br>
-          <input type="radio" name="gender" value="other"> Other
-        </div>
-
-
-        <div class="my-form">
+      <div class="my-form">
+        <form>
           <p>
-            <label for="submit"> Place Order</label><br />
-            <input type="submit" value="✔ submit" id="button"/>
+            <label for="firstname"> First </label><br>
+            <input type="text" id="firstname" name="fn" required="required" placeholder="First name" />
           </p>
-        </div>
-      
+          <p>
+            <label for="lastname"> Last </label><br>
+            <input type="text" id="lastname" name="ln" placeholder="Last name" />
+          </p>
+          <p>
+            <label for="email"> Email </label><br>
+            <input type="email" id="Email" name="em" required="required" placeholder="E-mail address" />
+          </p>
+          <p>
+            <label for="street"> Adress (street) </label><br>
+            <input type="street" id="Email" name="st" required="required" placeholder="Street Name" />
+          </p>
+          <p>
+            <label for="House Number"> Adress (number) </label><br>
+            <input type="House Number" id="House Number" name="hn" required="required" placeholder="House Number" />
+          </p>
+        </form>
+      </div>
+
+
+      <div class="my-form">
+        <label for="payment"> Payment</label><br />
+        <select id="payment" name="pym">
+          <option> BitCoin </option>
+          <option> Klarna</option>
+          <option> VISA / Mastercard</option>
+          <option> PayPal</option>
+        </select>
+      </div>
+
+      <div class="my-form">
+        <label for="radio"> Gender</label><br />
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female" checked="checked"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+      </div>
+
+
+      <div class="my-form">
+        <p>
+          <label for="submit"> Place Order</label><br />
+          <input type="submit" value="✔ submit" id="button" />
+        </p>
+      </div>
+
     </section>
 
 
@@ -139,7 +173,11 @@
   <footer>
     <hr>
     &copy; 2020 Burgers Inc.
-    <p><img src="https://imagizer.imageshack.com/img923/6663/G3tvCm.gif" alt="Monkey" title="Another in-line element" width="200"> visitors since the previous counter reset.</p>
+    <p><img src="https://imagizer.imageshack.com/img923/6663/G3tvCm.gif" alt="Monkey" title="Another in-line element"
+        width="200"> visitors since the previous counter reset.</p>
   </footer>
+  <script src="https://vuejs.org/js/vue.js" defer></script>
+  <script src="js/vue_script.js" defer></script>
 </body>
+
 </html>

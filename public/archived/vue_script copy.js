@@ -1,4 +1,29 @@
-/* <script src="https://vuejs.org/js/vue.js"></script>
+//<script src="https://vuejs.org/js/vue.js"></script>
+
+/*const box = new Vue({
+  el:'#burgers',
+  data: {
+    food: food
+  },
+  });
+*/
+/*
+var lists = new Vue({
+  el: '#list',
+  data: {
+  object: [
+   'The Scary One',
+   'The French One',
+   'The Trump One',
+   'Air Force One',
+   'The Done'
+   ]
+  }
+  })
+
+  */
+
+  /*
 
 <div id="myID">
     {{ ArbitraryVariableName}}
@@ -27,22 +52,7 @@ const vm = new Vue({
 </div>
 
 */
-  
-/*
-var lists = new Vue({
-  el: '#list',
-  data: {
-  object: [
-   'The Scary One',
-   'The French One',
-   'The Trump One',
-   'Air Force One',
-   'The Done'
-   ]
-  }
-  })
-
-  */
+ 
 
   // -----------------------------
 
