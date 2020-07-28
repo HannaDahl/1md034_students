@@ -1,5 +1,13 @@
+const box = new Vue({
+  el: '#menu',
+  data: {
+    food: food
+  },
+  });
 
 
+
+/*
 var burger1 = new Vue({
   el: '#burger1',
   data: {
@@ -47,6 +55,4 @@ var burger3 = new Vue({
   }
   }
 });
-
-
-
+*/

@@ -5,6 +5,7 @@
   <title>Burgers Inc.</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/menu.js"></script>
   <!--<script src="js/js_script.js" defer></script> -->
 </head>
 </div>
@@ -32,24 +33,28 @@
       <p> At Burgers Inc. we promote 3 of our burgers online each month. <br />
         Here are the current ones! Select one of your choosing to order. </p>
 
-      <div id="wrapper" align="center">
+     <!-- <div id="wrapper" align="center">-->
 
         <!--<div id="Scary">
            <th><img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" height="300" width="300"></th>
         </div> -->
 
-      <!--
-        <div>
-          <ul id="example-1">
-            <li v-for="item in items" :key="item.message">
-              {{item.message}}
+        <div id="menu" class="wrapper">
+        <div v-for="(x, index) in food">
+          <h2> {{ x.name }} </h2>
+          <img :src="x.img">
+          <ul>
+            <li> {{x.meat}}  </li>
+            <li> {{x.special}}  </li>
+            <li> {{x.kCal}}  </li>
+            <li> {{x.allergy}}  </li>
             </li>
           </ul>
+          
         </div>
+      </div>
 
-        -->
-
-        <div id="burger1">
+    <!--    <div id="burger1">
           <h4>{{ name }} </h4> 
           <img v-bind:src="'/img/' + pics.burgerpic" /> 
           <ul>
@@ -78,7 +83,7 @@
             </li>
           </ul>
         </div>
-
+-->
 
         <!--
       </div>
