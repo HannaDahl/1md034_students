@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/menu.js"></script>
-  <!--<script src="js/js_script.js" defer></script> -->
+  <!-- <script src="js/js_script.js" defer></script> -->
 </head>
 </div>
 
@@ -33,28 +33,75 @@
       <p> At Burgers Inc. we promote 3 of our burgers online each month. <br />
         Here are the current ones! Select one of your choosing to order. </p>
 
-     <!-- <div id="wrapper" align="center">-->
+      <!-- <div id="wrapper" align="center">-->
 
-        <!--<div id="Scary">
+      <!--<div id="Scary">
            <th><img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" height="300" width="300"></th>
         </div> -->
 
-        <div id="menu" class="wrapper">
+      <div id="menu" class="wrapper">
         <div v-for="(x, index) in food">
+          <br>
+          <hr><br>
           <h2> {{ x.name }} </h2>
           <img :src="x.img">
           <ul>
-            <li> {{x.meat}}  </li>
-            <li> {{x.special}}  </li>
-            <li> {{x.kCal}}  </li>
-            <li> {{x.allergy}}  </li>
-            </li>
+            <li> {{x.meat}} </li>
+            <li> {{x.special}} </li>
+            <li> {{x.kCal}} </li>
+            <li> {{x.allergy}} </li>
           </ul>
-          
-        </div>
-      </div>
+          <div id="test">
 
-    <!--    <div id="burger1">
+          </div>
+          <!-- <input type="checkbox" value="" v-model="categories" v-on:click="orderedAll()">
+        Order all! -->
+          <input type="checkbox" value="The Scary One, The French One, The Trump One" v-model="array"
+            v-on:click="bigOrder()">
+          Order all!
+          <br><br>
+          <hr>
+        </div>
+
+
+        <div><br>
+          <h4>Order seperately:</h4>
+        </div>
+
+        <div></div>
+        <div></div>
+
+        <div>
+
+          <input type="checkbox" value="The Scary One" id="scary" v-model="array" v-on:click="independentOrder()">The
+          Scary One <br>
+          <input type="checkbox" value="The French One" id="french" v-model="array" v-on:click="independentOrder()"> The
+          French One <br>
+          <input type="checkbox" value="The Trump One" id="trump" v-model="array" v-on:click="independentOrder()"> The
+          Trump One <br>
+          <br>
+          <br>
+
+
+
+          You have ordered (✔): <br>
+          {{ test }}
+          {{ array[0] }} <br>
+          {{ array[1] }} <br>
+          {{ array[2] }} <br>
+
+
+        </div>
+
+        <!--  <div v-for="array in arrays">
+            <p> You have ordered: </p>
+            <ul>
+              <li> {{ Array }} </li>
+            </ul>
+        </div>
+      -->
+
+        <!--    <div id="burger1">
           <h4>{{ name }} </h4> 
           <img v-bind:src="'/img/' + pics.burgerpic" /> 
           <ul>
@@ -113,6 +160,13 @@
         -->
       </div>
 
+      <!--   <div id="app">
+        <input type="text" v-model="hi">
+        <input type="checkbox" v-model="isTrue">
+           {{ hi }}
+      </div>
+-->
+
     </section>
 
     <section id="info">
@@ -122,53 +176,101 @@
 
       <div class="my-form">
         <form>
-          <p>
+
+          <p></p>
+
+
+          <div id="app2">
+
+            <p></p>
             <label for="firstname"> First </label><br>
-            <input type="text" id="firstname" name="fn" required="required" placeholder="First name" />
-          </p>
-          <p>
+            <input v-model="personalInfo1" type="text" id="firstname" name="fn" required="required"
+              placeholder="First name" />
+
+            <p></p>
             <label for="lastname"> Last </label><br>
-            <input type="text" id="lastname" name="ln" placeholder="Last name" />
-          </p>
-          <p>
+            <input v-model="personalInfo2" ype="text" id="lastname" name="ln" placeholder="Last name" />
+
+            <p></p>
             <label for="email"> Email </label><br>
-            <input type="email" id="Email" name="em" required="required" placeholder="E-mail address" />
-          </p>
-          <p>
+            <input v-model="personalInfo3" type="email" id="Email" name="em" required="required"
+              placeholder="E-mail address" />
+
+            <p></p>
             <label for="street"> Adress (street) </label><br>
-            <input type="street" id="Email" name="st" required="required" placeholder="Street Name" />
-          </p>
-          <p>
+            <input v-model="personalInfo4" type="street" id="street" name="st" required="required"
+              placeholder="Street Name" />
+
+            <p></p>
             <label for="House Number"> Adress (number) </label><br>
-            <input type="House Number" id="House Number" name="hn" required="required" placeholder="House Number" />
-          </p>
+            <input v-model="personalInfo5" type="House Number" id="HouseNumber" name="hn" required="required"
+              placeholder="House Number" />
+
+            <p></p>
+            <label for="payment"> Payment</label><br />
+            <select v-model="personalInfo6" id="payment" name="pym">
+              <option v-for="payment in payments">{{ payment }}</option>
+            </select>
+
+            <p></p>
+            <label for="radio"> Gender</label><br />
+            <input type="radio" value="Male" v-model="gender">
+            <label for="male">Male</label>
+
+            <input type="radio" value="Female" v-model="gender">
+            <label for="female">Female</label>
+
+            <input type="radio" value="Other" v-model="gender">
+            <label for="other">Other</label>
+
+            <h4>Summarize</h4>
+
+            <p>Name: {{ personalInfo1 }} {{ personalInfo2 }} </p>
+            <p>Email: {{ personalInfo3 }} </p>
+            <p>Adress: {{ personalInfo4 }} {{ personalInfo5 }} </p>
+            <p>Choice of payment: {{ personalInfo6 }}</p>
+            <p>Gender: {{ gender }}</p>
+
+          </div>
+
+          <h4>Place order</h4>
+          <p>Please check that the information above is correct.</p>
+
         </form>
       </div>
 
-
+      <!--
       <div class="my-form">
         <label for="payment"> Payment</label><br />
         <select id="payment" name="pym">
-          <option> BitCoin </option>
-          <option> Klarna</option>
-          <option> VISA / Mastercard</option>
-          <option> PayPal</option>
+         
+          <option v-model="personalInfo6" > BitCoin </option>
+          <option v-model="personalInfo7" > Klarna</option>
+          <option v-model="personalInfo8" > VISA / Mastercard</option>
+          <option v-model="personalInfo9" > PayPal</option>
         </select>
       </div>
 
       <div class="my-form">
         <label for="radio"> Gender</label><br />
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female" checked="checked"> Female<br>
-        <input type="radio" name="gender" value="other"> Other
+        <input v-model="personalInfo10" type="radio" name="gender" id="male" value="male" > Male<br>
+        <input v-model="personalInfo11" type="radio" name="gender" id="female" value="female" checked="checked"> Female<br>
+        <input v-model="personalInfo12" type="radio" name="gender" id="other" value="other"> Other
       </div>
 
+      -->
 
-      <div class="my-form">
+      <!-- <div class="my-form">
         <p>
           <label for="submit"> Place Order</label><br />
           <input type="submit" value="✔ submit" id="button" />
         </p>
+      </div>
+    -->
+
+      <p> </p>
+      <div class="my-form">
+        <button v-on:click="buttonpress" id="button">{{ message }}</button>
       </div>
 
     </section>

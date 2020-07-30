@@ -143,43 +143,7 @@ console.log("testing");
 // You can pass a defined function as above (no parentheses), or provide an anonymous function
 myButton.onclick = function () {
     console.log("button clicked!");
-    this.value = "🍔 order has been sent!"
+    this.value = "🍔 Order has been sent!"
 }
-
-////////// GETTING DA VALUES ///////////////
-
-function personalInfo () {
-  var firstname = document.getElementById("firstname").value; 
-  console.log(firstname);
-  var lastname = document.getElementById("lastname").value; 
-  console.log(lastname);
-  var Email = document.getElementById("Email").value; 
-  console.log(Email);
-  var street = document.getElementById("street").value; 
-  console.log(street);
-  var HouseNumber = document.getElementById("HouseNumber").value; 
-  console.log(HouseNumber);
-  var e = document.getElementById("payment");
-  var payment = e.options[e.selectedIndex].text;
-  console.log(payment);
-
-  if (document.getElementById('female').checked) {
-    gender = document.getElementById('female').value;
-  }
-  if (document.getElementById('male').checked) {
-    gender = document.getElementById('male').value;
-  }
-  if (document.getElementById('other').checked) {
-    gender = document.getElementById('other').value;
-  }
-  console.log(gender);
-  var PersonalInfo = PersonalInfo = [firstname, lastname, Email, street, HouseNumber, payment, gender];
-  console.log(PersonalInfo);
-  return PersonalInfo;
-}
-
-personalInfo();
-                   
-
-
+                      
 
