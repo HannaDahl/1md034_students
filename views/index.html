@@ -274,10 +274,15 @@
       <div>
         <h1> Click in the map! </h1>
         <div class="view-box">
-          <div id="dots" v-on:click="addOrder">
+          <!-- <div id="dots" v-on:click="addOrder">
             <div v-for="(order, key) in orders"
               v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
               {{key}}
+            </div>
+          </div> -->
+          <div id="dots" v-on:click="displayOrder">
+            <div v-bind:style="{ left: localOrder.details.x + 'px', top: localOrder.details.y + 'px'}">
+              {{ localOrder.target }}
             </div>
           </div>
         </div>
@@ -298,9 +303,10 @@
     <p><img src="https://imagizer.imageshack.com/img923/6663/G3tvCm.gif" alt="Monkey" title="Another in-line element"
         width="200"> visitors since the previous counter reset.</p>
   </footer>
-  <script src="/socket.io/socket.io.js" defer></script>
   <script src="https://vuejs.org/js/vue.js" defer></script>
-  <script src="js/vue_script.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <!--<script src="js/dispatcher.js" defer></script>
+  --><script src="js/vue_script.js" defer></script>
   <link rel="stylesheet" href="css/deli-very.css">
 </body>
 
