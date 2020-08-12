@@ -84,6 +84,41 @@ body{
 #button:checked{
   cursor: pointer;
 }
+  
+
+button{
+  background: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+button:hover
+{
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+button:checked{
+  cursor: pointer;
+}
+
+.submit{
+  background: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.submit:hover
+{
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.submit:checked{
+  cursor: pointer;
+}
 
 #bottom{
     margin-top: 7px;
@@ -93,6 +128,7 @@ body{
     padding-bottom: 10px;
     border: 5px black double;
 }   
+
 
 .wrapper{
   display: grid;
