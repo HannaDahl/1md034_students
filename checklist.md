@@ -79,7 +79,7 @@ Add the following style/behaviour to your website (mostly in style.css but also 
 - [x] Copy the parts of deli-very.js that you need to make the map work into vue_script.js
 - [x] Check that your map works and adjust the coordinates if the dots don't show up in the right place.
 - [x] Separate addOrder into one function that controls what should happen when a user clicks in the map (displayOrder) (x) and rewrite addOrder to control what should happen when the user clicks the order button
-- [ x Remove the socket.on bindings to "currentQueue" and "initialize", and temporarily fix getNext to assign locally generated orderId's when an order is sent
+- [x] Remove the socket.on bindings to "currentQueue" and "initialize", and temporarily fix getNext to assign locally generated orderId's when an order is sent
 - [x] Send the actual burgers with the order instead of Beans and Curry
 - [ ] Send the customer's information from your input fields with the order
 - [ ] Update the dispatcher view so that you see the following for every order:

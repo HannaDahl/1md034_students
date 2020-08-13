@@ -236,8 +236,8 @@
 
           </div>
 
-          <h4>Place order</h4>
-          <p>Please check that the information above is correct.</p>
+        <!--  <h4>Place order</h4>-->
+          <p><em>Please check that the information above is correct.</em></p>
 
         </form>
       </div>
@@ -272,7 +272,7 @@
     -->
 
       <div>
-        <h1> Click in the map! </h1>
+        <h4> Mark your delivery adress in the map:</h4>
         <div class="view-box">
           <!-- <div id="dots" v-on:click="addOrder">
             <div v-for="(order, key) in orders"
@@ -282,13 +282,14 @@
           </div> -->
           <div id="dots" v-on:click="displayOrder">
             <div v-bind:style="{ left: localOrder.details.x + 'px', top: localOrder.details.y + 'px'}">
-              {{ localOrder.target }}
+              {{ localOrder.target  }}
             </div>
           </div>
         </div>
       </div>
 
       <p> </p>
+      <h4>Place order!</h4>
       <div class="my-form">
        <!-- <button v-on:click="buttonpress" id="button">{{ message }}</button>-->
        <button v-on:click="addOrder" id="button" class="submit">{{ message }}</button>
