@@ -1,14 +1,14 @@
 
 let food = [
     {
-    "name": "The Scary One",
-    "meat": "Vegan Beef",
-    "special": "Beans",
-    "kCal": "3 kCal",
-    "allergy": "Nuts",
-    "lactose": false,
-    "gluten": false,
-    "img": "/img/Scary.jpg"
+        "name": "The Scary One",
+        "meat": "Vegan Beef",
+        "special": "Beans",
+        "kCal": "3 kCal",
+        "allergy": "Nuts",
+        "lactose": false,
+        "gluten": false,
+        "img": "/img/Scary.jpg"
     },
     {
         "name": "The French One",
@@ -29,8 +29,28 @@ let food = [
         "lactose": true,
         "Gluten": true,
         "img": "/img/Trump.jpg"
-    }
-  ]
+    },
+    {
+        "name": "The Air Force One",
+        "meat": "Beef",
+        "special": "Bread",
+        "kCal": "299,792 kCal",
+        "allergy": "Steroids",
+        "lactose": true,
+        "Gluten": true,
+        "img": "/img/Air.png"
+    },
+    {
+        "name": "The Done",
+        "meat": "Charcoal",
+        "special": "Ketchup",
+        "kCal": "42 kCal",
+        "allergy": "Tomatoes",
+        "lactose": true,
+        "Gluten": true,
+        "img": "/img/Done.jpg"
+    },
+
+]
 
 
-  

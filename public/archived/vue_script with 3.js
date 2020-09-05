@@ -6,8 +6,14 @@ const box = new Vue({
   data: {
     food: food,
     array: [],
+    categories: "",
+    test: ""
   },
   methods: {
+    orderedAll: function () {
+      this.test = "Trump, Scary, French"
+      console.log("did da funtion")
+    },
     bigOrder: function () {
       scary = "The Scary One"
       french = "The French One"
@@ -60,7 +66,7 @@ const vam = new Vue({
   },
   methods: {
     getNext: function () {
-      this.increment = this.increment +1;
+      this.increment +1;
       return this.increment
     },
     displayOrder: function (event) {

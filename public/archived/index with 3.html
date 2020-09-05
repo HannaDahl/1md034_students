@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Burgers Inc.</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/menu.js"></script>
+  <!-- <script src="js/js_script.js" defer></script> -->
+</head>
+</div>
+
+
+<body>
+
+
+  <div id="container">
+
+    <div id="header_image">
+      <img src="https://imagizer.imageshack.com/img924/5844/5PE59G.png" id="heads" width="100%">
+    </div>
+
+    <div id="header_title">
+      <h1>Welcome to Burgers Inc.!</h1>
+    </div>
+
+  </div>
+
+  <main>
+    <section id="burger-section">
+
+      <h2> Our burgers </h2>
+      <p> At Burgers Inc. we promote 3 of our burgers online each month. <br />
+        Here are the current ones! Select one of your choosing to order. </p>
+
+      <!-- <div id="wrapper" align="center">-->
+
+      <!--<div id="Scary">
+           <th><img src="https://i.pinimg.com/originals/97/9b/8b/979b8b49c4e0cd910087653bcf6f884b.jpg" align="center" height="300" width="300"></th>
+        </div> -->
+
+      <div id="menu" class="wrapper">
+        <div v-for="(x, index) in food">
+          <br>
+          <hr><br>
+          <h2> {{ x.name }} </h2>
+          <img :src="x.img">
+          <ul>
+            <li> {{x.meat}} </li>
+            <li> {{x.special}} </li>
+            <li> {{x.kCal}} </li>
+            <li> {{x.allergy}} </li>
+          </ul>
+          <div id="test">
+
+          </div>
+          <!-- <input type="checkbox" value="" v-model="categories" v-on:click="orderedAll()">
+        Order all! -->
+          <input type="checkbox" value="The Scary One, The French One, The Trump One" v-model="array"
+            v-on:click="bigOrder()">
+          Order all!
+          <br><br>
+          <hr>
+        </div>
+
+
+        <div><br>
+          <h4>Order seperately:</h4>
+        </div>
+
+        <div></div>
+        <div></div>
+
+        <div>
+
+          <input type="checkbox" value="The Scary One" id="scary" v-model="array" v-on:click="independentOrder()">The
+          Scary One <br>
+          <input type="checkbox" value="The French One" id="french" v-model="array" v-on:click="independentOrder()"> The
+          French One <br>
+          <input type="checkbox" value="The Trump One" id="trump" v-model="array" v-on:click="independentOrder()"> The
+          Trump One <br>
+          <br>
+          <br>
+
+
+
+          You have ordered (✔): <br>
+          {{ test }}
+          {{ array[0] }} <br>
+          {{ array[1] }} <br>
+          {{ array[2] }} <br>
+
+
+        </div>
+
+        <!--  <div v-for="array in arrays">
+            <p> You have ordered: </p>
+            <ul>
+              <li> {{ Array }} </li>
+            </ul>
+        </div>
+      -->
+
+        <!--    <div id="burger1">
+          <h4>{{ name }} </h4> 
+          <img v-bind:src="'/img/' + pics.burgerpic" /> 
+          <ul>
+            <li v-for="item in items" :key="item.contains">
+              {{item.contains}}
+            </li>
+          </ul>
+        </div>
+
+        <div id="burger2">
+          <h4>{{ name }} </h4> 
+          <img v-bind:src="'/img/' + pics.burgerpic" /> 
+          <ul>
+            <li v-for="item in items" :key="item.contains">
+              {{item.contains}}
+            </li>
+          </ul>
+        </div>
+
+        <div id="burger3">
+          <h4>{{ name }} </h4> 
+          <img v-bind:src="'/img/' + pics.burgerpic" /> 
+          <ul>
+            <li v-for="item in items" :key="item.contains">
+              {{item.contains}}
+            </li>
+          </ul>
+        </div>
+-->
+
+        <!--
+      </div>
+      <div id="Air">
+
+      </div>
+      <div id="Done">
+      -->
+
+
+      </div>
+      <!--  <div>
+            <img src="https://i.pinimg.com/originals/90/d0/38/90d038fc4c36eb13ebf8a4cd01f56edb.jpg" align="center" height="300" width="300"></th>
+            <h1>The French One</h1>
+            <li > Finest Meat</li>
+            <li > Camembert </li>
+            <li class="allergies"> Contains lactose</li>
+          </div>
+          <div>
+            <img src="http://media4.xn--ihuvudetpevap-xfb.se/2016/11/IMG_1402.jpg" align="center" height="300" width="300"></th>
+            <h1>The Trump One</h1>
+            <li > Probably meat</li>
+            <li >  E450, E251, E452</li>
+            <li  class="allergies"> Contains cholesterol</li>
+          </div>
+
+        -->
+      </div>
+
+      <!--   <div id="app">
+        <input type="text" v-model="hi">
+        <input type="checkbox" v-model="isTrue">
+           {{ hi }}
+      </div>
+-->
+
+    </section>
+
+    <section id="info">
+
+      <h3> Customer information </h3>
+      <p> Please enter your information. </p>
+
+      <div class="my-form">
+        <form>
+
+          <p></p>
+
+
+          <div id="app2">
+
+            <p></p>
+            <label for="firstname"> First </label><br>
+            <input v-model="personalInfo1" type="text" id="firstname" name="fn" required="required"
+              placeholder="First name" />
+
+            <p></p>
+            <label for="lastname"> Last </label><br>
+            <input v-model="personalInfo2" ype="text" id="lastname" name="ln" placeholder="Last name" />
+
+            <p></p>
+            <label for="email"> Email </label><br>
+            <input v-model="personalInfo3" type="email" id="Email" name="em" required="required"
+              placeholder="E-mail address" />
+
+            <!--  <p></p>
+            <label for="street"> Adress (street) </label><br>
+            <input v-model="personalInfo4" type="street" id="street" name="st" required="required"
+              placeholder="Street Name" />
+
+            <p></p>
+            <label for="House Number"> Adress (number) </label><br>
+            <input v-model="personalInfo5" type="House Number" id="HouseNumber" name="hn" required="required"
+              placeholder="House Number" />
+
+              -->
+
+            <p></p>
+            <label for="payment"> Payment</label><br />
+            <select v-model="personalInfo6" id="payment" name="pym">
+              <option v-for="payment in payments">{{ payment }}</option>
+            </select>
+
+            <p></p>
+            <label for="radio"> Gender</label><br />
+            <input type="radio" value="Male" v-model="gender">
+            <label for="male">Male</label>
+
+            <input type="radio" value="Female" v-model="gender">
+            <label for="female">Female</label>
+
+            <input type="radio" value="Other" v-model="gender">
+            <label for="other">Other</label>
+
+            <h4>Summarize</h4>
+
+            <p>Name: {{ personalInfo1 }} {{ personalInfo2 }} </p>
+            <p>Email: {{ personalInfo3 }} </p>
+            <!--<p>Adress: {{ personalInfo4 }} {{ personalInfo5 }} -->
+            </p>
+            <p>Choice of payment: {{ personalInfo6 }}</p>
+            <p>Gender: {{ gender }}</p>
+
+          </div>
+
+        <!--  <h4>Place order</h4>-->
+          <p><em>Please check that the information above is correct.</em></p>
+
+        </form>
+      </div>
+
+      <!--
+      <div class="my-form">
+        <label for="payment"> Payment</label><br />
+        <select id="payment" name="pym">
+         
+          <option v-model="personalInfo6" > BitCoin </option>
+          <option v-model="personalInfo7" > Klarna</option>
+          <option v-model="personalInfo8" > VISA / Mastercard</option>
+          <option v-model="personalInfo9" > PayPal</option>
+        </select>
+      </div>
+
+      <div class="my-form">
+        <label for="radio"> Gender</label><br />
+        <input v-model="personalInfo10" type="radio" name="gender" id="male" value="male" > Male<br>
+        <input v-model="personalInfo11" type="radio" name="gender" id="female" value="female" checked="checked"> Female<br>
+        <input v-model="personalInfo12" type="radio" name="gender" id="other" value="other"> Other
+      </div>
+
+      -->
+
+      <!-- <div class="my-form">
+        <p>
+          <label for="submit"> Place Order</label><br />
+          <input type="submit" value="✔ submit" id="button" />
+        </p>
+      </div>
+    -->
+
+      <div>
+        <h4> Mark your delivery adress in the map:</h4>
+        <div class="view-box">
+          <!-- <div id="dots" v-on:click="addOrder">
+            <div v-for="(order, key) in orders"
+              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+              {{key}}
+            </div>
+          </div> -->
+          <div id="dots" v-on:click="displayOrder">
+            <div v-bind:style="{ left: localOrder.details.x + 'px', top: localOrder.details.y + 'px'}">
+              {{ localOrder.target  }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p> </p>
+      <h4>Place order!</h4>
+      <div class="my-form">
+       <!-- <button v-on:click="buttonpress" id="button">{{ message }}</button>-->
+       <button v-on:click="addOrder" id="button" class="submit">{{ message }}</button>
+      </div>
+
+    </section>
+
+
+  </main>
+  <footer>
+    <hr>
+    &copy; 2020 Burgers Inc.
+    <p><img src="https://imagizer.imageshack.com/img923/6663/G3tvCm.gif" alt="Monkey" title="Another in-line element"
+        width="200"> visitors since the previous counter reset.</p>
+  </footer>
+  <script src="https://vuejs.org/js/vue.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <!--<script src="js/dispatcher.js" defer></script>
+  --><script src="js/vue_script.js" defer></script>
+  <link rel="stylesheet" href="css/deli-very.css">
+</body>
+
+</html>
